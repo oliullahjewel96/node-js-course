@@ -25,18 +25,29 @@ const fs = require("fs");
 
 // directories
 
-if (!fs.existsSync("assets")) {
-    fs.mkdir("assets", (err) => {
+// if (!fs.existsSync("assets")) {
+//     fs.mkdir("assets", (err) => {
+//         if (err) {
+//             console.log(err);
+//         }
+//         console.log("Directory created");
+//     });
+// } else {
+//     fs.rmdir("assets", (err) => {
+//         if (err) {
+//             console.log(err);
+//         }
+//         console.log("Directory deleted");
+//     });
+// }
+
+//deleting file
+
+if (fs.existsSync("docs/blog1.txt")) {
+    fs.unlink("docs/blog1.txt", (err) => {
         if (err) {
             console.log(err);
         }
-        console.log("Directory created");
-    });
-} else {
-    fs.rmdir("assets", (err) => {
-        if (err) {
-            console.log(err);
-        }
-        console.log("Directory deleted");
+        console.log("File deleted");
     });
 }
