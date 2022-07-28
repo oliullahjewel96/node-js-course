@@ -10,15 +10,33 @@ const fs = require("fs");
 
 //writing file
 
-fs.writeFile("docs/blog1.txt", "Hello World", (err) => {
-    if (err) {
-        console.log(err);
-    }
-    console.log("File created");
-});
-fs.writeFile("docs/blog2.txt", "first blog", (err) => {
-    if (err) {
-        console.log(err);
-    }
-    console.log("File created");
-});
+// fs.writeFile("docs/blog1.txt", "Hello World", (err) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     console.log("File created");
+// });
+// fs.writeFile("docs/blog2.txt", "first blog", (err) => {
+//     if (err) {
+//         console.log(err);
+//     }
+//     console.log("File created");
+// });
+
+// directories
+
+if (!fs.existsSync("assets")) {
+    fs.mkdir("assets", (err) => {
+        if (err) {
+            console.log(err);
+        }
+        console.log("Directory created");
+    });
+} else {
+    fs.rmdir("assets", (err) => {
+        if (err) {
+            console.log(err);
+        }
+        console.log("Directory deleted");
+    });
+}
