@@ -7,8 +7,20 @@ const server = http.createServer((req, res) => {
     res.setHeader("Content-Type", "text/html");
     // res.write("<h1>Hey I am a Web developer </h1>");
     // res.write("<h5> My name is oli ullah jewel </h5>");
+    let path = "./views/";
 
-    fs.readFile("views/index.html", (err, data) => {
+    switch (req.url) {
+        case "/":
+            path += "index.html";
+            break;
+        case "/about":
+            path += "about.html";
+            break;
+        default:
+            path += "404.html";
+            break;
+    }
+    fs.readFile(path, (err, data) => {
         if (err) {
             console.log(err);
             res.end();
