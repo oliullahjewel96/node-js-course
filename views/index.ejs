@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('partials/head.ejs') %>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLOG SITE |
-        <%= title %>
-    </title>
-</head>
-
-<body>
-    <%- include('partials/nav.ejs') %>
-        <div class="bolgs content">
-            <h2>All Blogs</h2>
-            <% if(blogs.length>0){%>
-                <% blogs.forEach(blog=>{ %>
-                    <h3 class="title">
-                        <%=blog.title%>
-                    </h3>
-                    <p class="snippet">
-                        <%=blog.snippet%>
-                    </p>
-                    <%})%>
-                        <%} else{%>
-                            <p>No blogs found</p>
-                            <%}%>
-        </div>
-</body>
+    <body>
+        <%- include('partials/nav.ejs') %>
+            <div class="bolgs content">
+                <h2>All Blogs</h2>
+                <% if(blogs.length>0){%>
+                    <% blogs.forEach(blog=>{ %>
+                        <h3 class="title">
+                            <%=blog.title%>
+                        </h3>
+                        <p class="snippet">
+                            <%=blog.snippet%>
+                        </p>
+                        <%})%>
+                            <%} else{%>
+                                <p>No blogs found</p>
+                                <%}%>
+            </div>
+            <%- include('partials/footer.ejs') %>
+    </body>
 
 </html>

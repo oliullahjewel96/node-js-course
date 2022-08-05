@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('partials/head.ejs') %>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLOG SITE |
-        <%= title %>
-    </title>
-</head>
-
-<body>
-    <%- include('partials/nav.ejs') %>
-        <div class="create-bolg content">
-            <form>
-                <label for="title">Blog Title:</label>
-                <input type="text" id="title" required />
-                <label for="snippet">Blog Snippet:</label>
-                <input type="text" id="snippet" required />
-                <label for="body">Blog Body:</label>
-                <textarea id="body" required></textarea>
-                <button>Add Blog</button>
-            </form>
-        </div>
-</body>
+    <body>
+        <%- include('partials/nav.ejs') %>
+            <div class="create-bolg content">
+                <form>
+                    <label for="title">Blog Title:</label>
+                    <input type="text" id="title" required />
+                    <label for="snippet">Blog Snippet:</label>
+                    <input type="text" id="snippet" required />
+                    <label for="body">Blog Body:</label>
+                    <textarea id="body" required></textarea>
+                    <button>Add Blog</button>
+                </form>
+            </div>
+            <%- include('partials/footer.ejs') %>
+    </body>
 
 </html>
