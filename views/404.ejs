@@ -11,26 +11,8 @@
 </head>
 
 <body>
-    <nav>
-        <div class="site-title">
-            <a href="/">
-                <h1>Blog site</h1>
-            </a>
-            <p>A Blog site for readers</p>
-        </div>
-        <ul>
-            <li>
-                <a href="/">Blogs</a>
-            </li>
-            <li>
-                <a href="/about">About</a>
-            </li>
-            <li>
-                <a href="/blogs/create">New Blog</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="no-found content">OOPS, page not found</div>
+    <%- include('partials/nav.ejs') %>
+        <div class="no-found content">OOPS, page not found</div>
 </body>
 
 </html>
